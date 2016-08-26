@@ -1,0 +1,150 @@
+<html><head>
+<meta charset="UTF-8" />
+<meta name=viewport content="width=device-width, initial-scale=1" />
+<meta name="description" content="A desktop client for Kong Admin API" />
+<meta name="keywords" content="kongdash, kong, kong dashboard, kong desktop, kong admin app">
+
+<title>KongDash . Dashboard for Kong Admin API</title>
+
+<link rel="icon" href="images/favicon.png" />
+<link rel="apple-touch-icon" href="images/favicon.png" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" type="text/css" href="css/material.min.css" />
+
+<style type="text/css">
+* { box-sizing: border-box; }
+
+body { color: #3C4D55; }
+
+p { font-size: 18px; }
+
+a { text-decoration: none; color: #e36328; }
+a:hover { color: #229cf6; }
+
+.btn { display: inline-block; border: 1px solid transparent; border-radius: 5px;
+    padding: 8px 20px 8px 20px; text-decoration: none; font-weight: 400; color: #FFFFFF; }
+.btn:hover { color: #FFFFFF; }
+
+.btn.info { border-color: #218DE1; background-color: #218DE1; }
+.btn.info:hover { border-color: #218DE1; background-color: #229cf6; }
+
+.btn.info.border { background-color: #FFFFFF; color: #218DE1; }
+.btn.info.border:hover { background-color: #DEEAF6; }
+
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+
+.v-padding-10 { padding-top: 10px; padding-bottom: 10px; }
+
+.h-padding-10 { padding-left: 10px; padding-right: 10px; }
+
+.t-padding-20 { padding-top: 20px; }
+.t-padding-50 { padding-top: 50px; }
+
+.bg-icon-blue { background-color: #218DE1; }
+
+.mdl-layout__header { box-shadow: none; }
+.mdl-layout__header, .mdl-layout__header-row .mdl-navigation__link { background-color: #FFFFFF; color: #1A242D; }
+
+section.content { padding: 100px 50px 100px 50px; }
+section.content .content__heading { font-size: 30px; margin-bottom: 50px; }
+section.content .content__heading:after { display: block; content: ' '; height: 2px; width: 50px;
+    background: #B8B8CF; margin: 10px auto 0 auto; }
+
+.page-content { width: 100%; height: calc(100% - 64px); }
+.full-stretch { width: 100%; height: 100%; background: #FFFFFF; }
+
+.pane { display: block; position: relative; }
+.pane .pane__footer { float: none; position: absolute; bottom: 0; width: 100%; height: 44px;  }
+
+footer.footer { padding: 15px 0 15px 0; color: #E6EBEF; background-color: #1A242D; }
+footer.footer .author-info { font-size: 16px; }
+footer.footer .author-info a { color: #37cff9; }
+footer.footer .author-info i.material-icons { font-size: 14px; color: #ff4c25; }
+
+section#download {  background-color:  #FAFAFF; }
+
+section#download a.btn { margin-left: 10px; margin-right: 10px; }
+.download-linux a.btn { width: 150px; }
+.download-others a.btn { width: 238px; }
+
+section#contribute { border-top: 1px dashed #dedede; }
+</style>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script type="text/javascript" src="js/material.min.js"></script>
+</head>
+
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">KongDash</span>
+        <div class="mdl-layout-spacer"></div>
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href="#download">Download</a>
+            <a class="mdl-navigation__link" href="#contribute">Contribute</a>
+            <a class="mdl-navigation__link" href="https://github.com/ajaysreedhar/kongdash" target="_blank">GitHub</a>
+        </nav>
+    </div>
+</header>
+<main class="mdl-layout__content">
+<div class="page-content">
+    <section id="home" class="full-stretch pane align-center">
+        <div class="t-padding-50"><img src="images/icon-border-256x256.png" width="136px" /></div>
+        <h2>KongDash</h2>
+        <h5>A desktop client for Kong Admin API</h5>
+        <div class="t-padding-20"><p><a href="#download" class="btn info border">Download</a></p></div>
+
+        <div class="t-padding-20">
+            <a href="https://twitter.com/share" data-size="large" data-url="http://ajaysreedhar.github.io/kongdash" data-text="KongDash - Desktop client for #GetKong Admin API by @ajay_sreedhar" data-related="ajay_sreedhar" class="twitter-share-button">Tweet</a>&nbsp;
+            <a class="github-button" href="https://github.com/ajaysreedhar/kongdash" data-icon="octicon-star" data-style="mega" aria-label="Star ajaysreedhar/kongdash on GitHub">Star</a>
+        </div>
+
+        <div class="pane__footer bg-icon-blue"></div>
+    </section>
+
+    <section id="screenshot" class="bg-icon-blue align-center t-padding-50"><img width="1000px" src="images/screenshot-pane.png" /></section>
+
+    <section id="download" class="content align-center">
+        <div class="content__heading">Download</div>
+        <p>Linux</p>
+        <p class="h-padding-10 download-linux">
+            <a class="btn info" href="#">32bit .deb</a>
+            <a class="btn info" href="#">64bit .deb</a>
+            <a href="#" class="btn info">Tar Archive</a>
+        </p>
+        <p class="t-padding-20">Others</p>
+        <p class="h-padding-10 download-others">
+            <a class="btn info" href="#">Windows</a>
+            <a class="btn info border" href="#">OS X (Coming soon)</a>
+        </p>
+        <p class="t-padding-20"><a target="_blank" href="https://github.com/ajaysreedhar/kongdash/releases">View All Releases</a></p>
+    </section>
+
+    <section id="contribute" class="content align-center">
+        <div class="content__heading">Contribute</div>
+        <p>KongDash is built upon <a href="http://electron.atom.io/" target="_blank">Electron</a> and
+            <a href="https://angularjs.org/" target="_blank">AngularJs</a></p>
+        <p class="v-padding-10"><a class="btn info" href="https://github.com/ajaysreedhar/kongdash" target="_blank">View on GitHub</a></p>
+    </section>
+
+
+    <footer class="footer">
+        <div class="mdl-grid">
+            <div class="mdl-col mdl-cell--8-col"></div>
+            <div class="mdl-col mdl-cell--4-col align-right">
+                <div class="author-info">
+                Coded with <i class="material-icons">favorite</i> by
+                <a href="https://twitter.com/ajay_sreedhar">@ajay_sreedhar</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</main>
+</div>
+
+</body>
+</html>
