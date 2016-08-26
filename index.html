@@ -9,12 +9,13 @@
 <link rel="icon" href="images/favicon.png" />
 <link rel="apple-touch-icon" href="images/favicon.png" />
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" type="text/css" href="css/material.min.css" />
 
 <style type="text/css">
 * { box-sizing: border-box; }
 
-body { color: #3C4D55; }
+body { color: #3C4D55; font-family: 'Roboto', sans-serif; }
 
 p { font-size: 18px; }
 
@@ -41,7 +42,7 @@ a:hover { color: #229cf6; }
 .t-padding-20 { padding-top: 20px; }
 .t-padding-50 { padding-top: 50px; }
 
-.bg-icon-blue { background-color: #218DE1; }
+.bg-icon-blue { background-color: #218DE1; color: #FFFFFF; }
 
 .mdl-layout__header { box-shadow: none; }
 .mdl-layout__header, .mdl-layout__header-row .mdl-navigation__link { background-color: #FFFFFF; color: #1A242D; }
@@ -52,23 +53,30 @@ section.content .content__heading:after { display: block; content: ' '; height: 
     background: #B8B8CF; margin: 10px auto 0 auto; }
 
 .page-content { width: 100%; height: calc(100% - 64px); }
+
+@-moz-document url(https://ajaysreedhar.github.io/kongdash) {
+    .page-content { height: 100%; }
+}
+
 .full-stretch { width: 100%; height: 100%; background: #FFFFFF; }
 
 .pane { display: block; position: relative; }
 .pane .pane__footer { float: none; position: absolute; bottom: 0; width: 100%; height: 44px;  }
 
 footer.footer { padding: 15px 0 15px 0; color: #E6EBEF; background-color: #1A242D; }
-footer.footer .author-info { font-size: 16px; }
+footer.footer .author-info { font-size: 16px; margin-right: 10px; }
 footer.footer .author-info a { color: #37cff9; }
 footer.footer .author-info i.material-icons { font-size: 14px; color: #ff4c25; }
 
 section#download {  background-color:  #FAFAFF; }
 
-section#download a.btn { margin-left: 10px; margin-right: 10px; }
+section#download a.btn { margin-left: 10px; margin-right: 10px; margin-bottom: 10px; }
 .download-linux a.btn { width: 150px; }
 .download-others a.btn { width: 238px; }
 
 section#contribute { border-top: 1px dashed #dedede; }
+
+i.arrow_down_white { color: #FFFFFF; font-size: 42px; }
 </style>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -94,7 +102,7 @@ section#contribute { border-top: 1px dashed #dedede; }
     <section id="home" class="full-stretch pane align-center">
         <div class="t-padding-50"><img src="images/icon-border-256x256.png" width="136px" /></div>
         <h2>KongDash</h2>
-        <h5>A desktop client for Kong Admin API</h5>
+        <h5>A desktop client for <a href="https://getkong.org/" target="_blank">Kong</a> Admin API</h5>
         <div class="t-padding-20"><p><a href="#download" class="btn info border">Download</a></p></div>
 
         <div class="t-padding-20">
@@ -102,7 +110,9 @@ section#contribute { border-top: 1px dashed #dedede; }
             <a class="github-button" href="https://github.com/ajaysreedhar/kongdash" data-icon="octicon-star" data-style="mega" aria-label="Star ajaysreedhar/kongdash on GitHub">Star</a>
         </div>
 
-        <div class="pane__footer bg-icon-blue"></div>
+        <div class="pane__footer bg-icon-blue align-center">
+            <a href="#screenshot"><i class="material-icons arrow_down_white">keyboard_arrow_down</i></a>
+        </div>
     </section>
 
     <section id="screenshot" class="bg-icon-blue align-center t-padding-50"><img width="1000px" src="images/screenshot-pane.png" /></section>
