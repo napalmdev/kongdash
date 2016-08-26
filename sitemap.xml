@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url>
+<loc>https://ajaysreedhar.github.io/kongdash/</loc>
+<image:image><image:loc>https://ajaysreedhar.github.io/kongdash/images/screenshot-pane.png</image:loc></image:image>
+<image:image><image:loc>https://ajaysreedhar.github.io/kongdash/images/icon-border-256x256.png</image:loc></image:image>
+<image:image><image:loc>https://ajaysreedhar.github.io/kongdash/images/icon-236x236.png</image:loc></image:image>
+<priority>1.00</priority>
+</url>
+<url>
+<loc>https://ajaysreedhar.github.io/kongdash/#download</loc>
+<priority>0.99</priority>
+</url>
+<url>
+<loc>https://ajaysreedhar.github.io/kongdash/#contribute</loc>
+<priority>0.99</priority>
+</url>
+</urlset>
