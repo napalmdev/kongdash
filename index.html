@@ -23,6 +23,9 @@ p { font-size: 18px; }
 a { text-decoration: none; color: #e36328; }
 a:hover { color: #229cf6; }
 
+.label { display: inline-block; padding: 1px 5px 1px 5px; border-radius: 3px; }
+.label.warning {background-color: #ff691a; color: #ffffff; }
+
 .btn { display: inline-block; border: 1px solid transparent; border-radius: 5px;
     padding: 8px 20px 8px 20px; text-decoration: none; font-weight: 400; color: #FFFFFF; }
 .btn:hover { color: #FFFFFF; }
@@ -72,8 +75,7 @@ footer.footer .author-info i.material-icons { font-size: 14px; color: #ff4c25; }
 section#download {  background-color:  #FAFAFF; }
 
 section#download a.btn { margin-left: 10px; margin-right: 10px; margin-bottom: 10px; }
-.download-linux a.btn { width: 150px; }
-.download-others a.btn { width: 238px; }
+.download-links a.btn { width: 180px; }
 
 section#contribute { border-top: 1px dashed #dedede; }
 
@@ -85,7 +87,8 @@ i.arrow_down_white { color: #FFFFFF; font-size: 42px; }
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">KongDash</span>
+        <span class="mdl-layout-title">KongDash</span>&nbsp;
+	<span class="label warning">beta</span>
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation mdl-layout--large-screen-only">
             <a class="mdl-navigation__link" href="#download">Download</a>
@@ -99,7 +102,7 @@ i.arrow_down_white { color: #FFFFFF; font-size: 42px; }
     <section id="home" class="full-stretch pane align-center">
         <div class="t-padding-50"><img src="images/icon-border-256x256.png" width="136px" /></div>
         <h2>KongDash</h2>
-        <h5>A desktop client for <a href="https://getkong.org/" target="_blank">Kong</a> Admin API</h5>
+        <h5>An elegant desktop client for <a href="https://getkong.org/docs/0.9.x/admin-api/" target="_blank">Kong Admin API</a></h5>
         <div class="t-padding-20"><p><a href="#download" class="btn info border">Download</a></p></div>
 
         <div class="t-padding-20">
@@ -117,24 +120,33 @@ i.arrow_down_white { color: #FFFFFF; font-size: 42px; }
     <section id="download" class="content align-center">
         <div class="content__heading">Download</div>
         <p>Linux</p>
-        <p class="h-padding-10 download-linux">
-            <a class="btn info" href="#">32bit .deb</a>
-            <a class="btn info" href="#">64bit .deb</a>
-            <a href="#" class="btn info">Tar Archive</a>
+        <p class="h-padding-10 download-links">
+            <a class="btn info" href="https://github.com/ajaysreedhar/kongdash/releases/download/v0.1.0-beta/kongdash-0.1.0-beta-ia32.deb">32-bit .deb</a>
+            <a class="btn info" href="https://github.com/ajaysreedhar/kongdash/releases/download/v0.1.0-beta/kongdash-0.1.0-beta-x64.deb">64-bit .deb</a>
+	</p>
+        <p class="h-padding-10 download-links">
+            <a href="https://github.com/ajaysreedhar/kongdash/releases/download/v0.1.0-beta/kongdash-0.1.0-beta-linux-ia32.tar.gz" class="btn info">32-bit .tar.gz</a>
+	          <a href="https://github.com/ajaysreedhar/kongdash/releases/download/v0.1.0-beta/kongdash-0.1.0-beta-linux-x64.tar.gz" class="btn info">64-bit .tar.gz</a>
         </p>
         <p class="t-padding-20">Others</p>
-        <p class="h-padding-10 download-others">
-            <a class="btn info" href="#">Windows</a>
-            <a class="btn info border" href="#">OS X (Coming soon)</a>
+        <p class="h-padding-10 download-links">
+            <a href="https://github.com/ajaysreedhar/kongdash/releases/download/v0.1.0-beta/kongdash-0.1.0-beta-ia32.exe" class="btn info">Windows 32-bit</a>
+	          <a href="https://github.com/ajaysreedhar/kongdash/releases/download/v0.1.0-beta/kongdash-0.1.0-beta-x64.exe" class="btn info">Windows 64-bit</a>
         </p>
+	<p>Mac OS X (coming soon)</p>
         <p class="t-padding-20"><a target="_blank" href="https://github.com/ajaysreedhar/kongdash/releases">View All Releases</a></p>
     </section>
 
     <section id="contribute" class="content align-center">
         <div class="content__heading">Contribute</div>
-        <p>KongDash is built upon <a href="http://electron.atom.io/" target="_blank">Electron</a> and
-            <a href="https://angularjs.org/" target="_blank">AngularJs</a></p>
-        <p class="v-padding-10"><a class="btn info" href="https://github.com/ajaysreedhar/kongdash" target="_blank">View on GitHub</a></p>
+        <p>KongDash is built using <a href="http://electron.atom.io/" target="_blank">Electron</a>.</p>
+	<p>Please contribute to the development <br>with your
+	<a href="https://github.com/ajaysreedhar/kongdash/issues" target="_blank">feedbacks</a> or even better with
+	<a href="https://github.com/ajaysreedhar/kongdash/pulls" target="_blank">pull requests</a>.</p>
+        <p class="v-padding-10">
+		<a class="btn info border" href="https://github.com/ajaysreedhar/kongdash" target="_blank">Clone Repo</a> &nbsp;
+		<a class="btn info border" href="https://github.com/ajaysreedhar/kongdash/issues" target="_blank">Issues</a>
+	</p>
     </section>
 
 
