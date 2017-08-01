@@ -1,4 +1,64 @@
-main.contents {
-    margin-top: 50px;
+body { color: #181818; font-family: 'Roboto', sans-serif;
+    background: #1b6d85 url('../images/background-fluid.jpg') no-repeat fixed; background-size: cover; }
+
+p { font-size: 17px; }
+
+a { text-decoration: none; color: #0070c9; }
+    a:hover { color: #0070c9; }
+
+section { padding: 50px 0 50px 0; }
+section .section-heading { font-size: 30px; margin-bottom: 40px; }
+section .section-subheading { font-size: 20px; }
+
+footer { padding: 22px 0 22px 0; color: #E6EBEF; background-color: #1A242D; }
+footer a, footer a:hover { color: #37cff9; }
+footer .author-info { font-size: 16px; text-align: right; }
+footer .author-info i.fa { font-size: 14px; color: #ff4c25; }
+
+.content-center { text-align: center; }
+
+.padding-10 { padding: 10px !important; }
+.padding-20 { padding: 20px !important; }
+
+.title-main { color: #ffffff; font-size: 45px; font-weight: normal; line-height: 48px; }
+.title-main img.logo-main { width: 128px; height: 128px; }
+.subtitle-main { color: #ecf6f1; padding: 20px 0 20px 0; font-size: 28px; font-weight: lighter; }
+
+.btn, .btn-primary, .btn-info, .btn-success, .btn-warning, .btn-default {
+    border-color: transparent; border-radius: 3px; }
+
+.btn.btn-download { font-size: 17px; font-weight: normal; padding: 12px 30px 12px 30px; }
+.btn.btn-success { background: #10b760 none; box-shadow: none; }
+.btn.btn-warning { background: #EC9A25 none; box-shadow: none; }
+.btn.btn-info { background: #3AB2D6 none; box-shadow: none; }
+
+.btn.btn-default { background: #ffffff; color: #1A242D; }
+.btn.btn-default:hover { border-color: transparent; background: #fafafa none; color: #181818; }
+
+.btn.btn-download { min-width: 200px; height: auto; width: auto; margin: 10px; }
+.btn.btn-download i.fa { font-size: 24px; }
+
+.navbar.navbar-default {
+    margin-bottom: 0; border-radius: 0; border-color: transparent;
+    background: rgba(0, 0, 0, 0.8) none; box-shadow: none; border-bottom-width: 0; }
+
+.navbar.navbar-default .navbar-brand, .navbar.navbar-default .nav.navbar-nav a { color: #ffffff; }
+.navbar-brand { text-shadow: none; }
+
+.bg-white { background: #ffffff none; }
+.bg-grey { background: #f2f2f2 none; }
+
+.subtitle-main a { color: #37cff9; }
+.article-wrapper { margin-bottom: 30px; }
+
+#intro { height: 100vh; background: rgba(0, 0, 0, 0.8) none; }
+#screenshot img { max-width: 1062px; width: 100%; }
+
+@media (max-width:600px)  {
+    #intro { height: auto !important; }
 }
 
+@media (max-width:992px) {
+    footer .note { margin-bottom: 10px; }
+    footer .note, footer .author-info { text-align: center !important; }
+}
