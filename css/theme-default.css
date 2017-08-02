@@ -31,6 +31,7 @@ footer .author-info i.fa { font-size: 14px; color: #ff4c25; }
 .btn.btn-success { background: #10b760 none; box-shadow: none; }
 .btn.btn-warning { background: #EC9A25 none; box-shadow: none; }
 .btn.btn-info { background: #3AB2D6 none; box-shadow: none; }
+.btn.btn-primary { background: #2B6598 none; box-shadow: none; }
 
 .btn.btn-default { background: #ffffff; color: #1A242D; }
 .btn.btn-default:hover { border-color: transparent; background: #fafafa none; color: #181818; }
@@ -53,6 +54,7 @@ footer .author-info i.fa { font-size: 14px; color: #ff4c25; }
 
 #intro { height: calc(100vh - 50px); background: rgba(0, 0, 0, 0.8) none; }
 #screenshot img { max-width: 1062px; width: 100%; }
+#contribute .btn.btn-default { background: #f9f9fc none; border-color: #d2d2d2; }
 
 @media (max-height:450px)  {
     #intro { height: auto !important; }
