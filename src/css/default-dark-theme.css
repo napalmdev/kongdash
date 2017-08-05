@@ -3,10 +3,7 @@ a:hover { text-decoration: none; color: rgba(255, 255, 255, 0.9); }
 body.body { background-color: #1A242D; color: #efefef; }
 
 aside.drawer { background-color: #2F3E47; color: #bbbbff; }
-
-aside.drawer .icon { background-color: #3B4B54; }
-
-aside.drawer .icon { text-shadow: 1px 1px #1A242D; color: #D4DEF7; }
+aside.drawer .icon { background-color: #3B4B54; text-shadow: 1px 1px #1A242D; color: #D4DEF7; }
 
 main.content { background-color: #1A242D; }
 
