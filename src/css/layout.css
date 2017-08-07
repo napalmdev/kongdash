@@ -2,11 +2,8 @@
 
 ::-webkit-scrollbar { width: 6px; }
 
-::-webkit-scrollbar-track { -webkit-border-radius: 10px; border-radius: 10px; background-color: transparent; }
-
-::-webkit-scrollbar-thumb { -webkit-border-radius: 10px; border-radius: 10px; background: #394C57; }
-
-::-webkit-scrollbar-thumb:window-inactive { background: #2F3E47; }
+::-webkit-scrollbar-track { -webkit-border-radius: 10px; border-radius: 10px; }
+::-webkit-scrollbar-thumb { -webkit-border-radius: 10px; border-radius: 10px; }
 
 ::-webkit-input-placeholder { font-weight: normal; }
 
