@@ -7,7 +7,6 @@ a:hover { text-decoration: none; color: rgba(255, 255, 255, 0.9); }
 body.body { background-color: #f6f6f6; color: #121212; }
 
 aside.drawer { background-color: #2F3E47; color: #bbbbff; }
-
 aside.drawer .icon { background: #2F3E47 none; text-shadow: none; color:#bbbbff; }
 
 main.content { background-color: #f6f6f6; }
