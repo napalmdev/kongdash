@@ -1,3 +1,7 @@
+::-webkit-scrollbar-track { background-color: transparent; }
+::-webkit-scrollbar-thumb { background: #394C57; }
+::-webkit-scrollbar-thumb:window-inactive { background: #2F3E47; }
+
 a:hover { text-decoration: none; color: rgba(255, 255, 255, 0.9); }
 
 body.body { background-color: #1A242D; color: #efefef; }
