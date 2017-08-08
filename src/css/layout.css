@@ -48,9 +48,9 @@ ul.list { display: block;  margin: 0; padding: 0; }
 ul.list li { display: block; padding: 4px; border-radius: 4px; margin-bottom: 10px; }
 
 /* Wells */
-.well { margin-bottom: 25px; padding: 0; border-radius: 5px; }
+.well { margin-bottom: 25px; padding: 0; border-radius: 3px; }
 
-.well .well__heading { border-radius: 5px 5px 0 0; padding: 10px 15px 10px 15px; font-size: 0.97rem; font-weight: 500; }
+.well .well__heading { border-radius: 3px 3px 0 0; padding: 10px 15px 10px 15px; font-size: 0.97rem; font-weight: 500; }
 
 /* Content wrapper */
 .app-layout { width: 100%; height: 100%; }
@@ -117,6 +117,8 @@ table .action-group i.material-icons { font-size: 1.48rem; cursor: pointer; }
 table tr:last-child td:first-child { border-bottom-left-radius: 5px; }
 table tr:last-child td:last-child { border-bottom-right-radius: 5px; }
 
+table.table { border-radius: 3px; }
+
 /* Grid system */
 .container { display: block; position: relative; padding: 0; }
 
@@ -177,6 +179,8 @@ textarea {
 
 textarea.tx-small { height: 100px !important; }
 
+select { padding: 7px; border-radius: 3px; cursor: pointer !important; }
+
 .input-group-button input { vertical-align: top; display: inline-block; width: 80%; margin-right: 0;
     border-right-width: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; line-height: 5px; }
 
@@ -210,14 +214,14 @@ dl.horizontal > dd { width: 60%; font-size: 0.96rem; }
 
 .panel.panel-border { border-top: 3px solid transparent; }
 
-.panel .panel__heading { padding: 10px 15px 10px 15px; border-radius: 5px; font-weight: 500; font-size: 0.97rem; }
+.panel .panel__heading { padding: 10px 15px 10px 15px; border-radius: 3px; font-weight: 500; font-size: 0.97rem; }
 .panel .panel__body { border-radius: 0 0 3px 3px; padding-left: 15px; padding-right: 15px; }
 
 /* Notebooks and tabs */
 .notebook .tab { cursor: pointer; padding: 5px 0 5px 0; }
 
-.notebook > .row:first-child { padding-top: 20px; border-radius: 5px 5px 0 0; margin-top: 0; margin-bottom: 0; }
-.notebook .tab.active { border-radius: 5px 5px 0 0 !important; }
+.notebook > .row:first-child { padding-top: 20px; border-radius: 3px 3px 0 0; margin-top: 0; margin-bottom: 0; }
+.notebook .tab.active { border-radius: 3px 3px 0 0 !important; }
 
 /* Helpers */
 .subheading { margin: 0 0 10px 0; padding: 0 0 10px 0; }
