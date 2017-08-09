@@ -22,7 +22,7 @@ i.material-icons.success { color: #10C469 !important; }
 i.material-icons.default { color: #545454 !important; }
 i.material-icons.danger { color: #FF5B5B !important; }
 i.material-icons.info { color: #35B8E0 !important; }
-i.material-icons.warning { color: #F9C851 !important; }
+i.material-icons.warning { color: #ff691a !important; }
 i.material-icons.md-17 { font-size: 17px !important; }
 
 .label { color: #ffffff; }
@@ -69,7 +69,7 @@ i.material-icons.md-17 { font-size: 17px !important; }
 
 .content__header { background-color: #FFFFFF; color: #2F3E47; border-bottom: 1px solid #e2e2e2; }
 .content__header .navigate a { background-color: transparent; }
-.content__header .navigate a:hover { background-color: #e6e6e6; }
+.content__header .navigate a:hover { background-color: transparent; color: #ad4dbf; }
 
 nav.navigation { background: transparent; }
 
@@ -77,7 +77,7 @@ nav.navigation a.navigation__link { color: #a8a8a8; text-decoration: none; text-
     nav.navigation a.navigation__link:hover { color: #e4edff; }
     nav.navigation a.navigation__link.active { background-color: #10C469; color: #FFFFFF; text-shadow: none; }
 
-nav.navigation hr { border-color: #656B6F; }
+nav.navigation hr { border-color: #e2e2e2; }
 
 table.table { background-color: #FFFFFF; }
 
@@ -147,15 +147,23 @@ div.input-control { background-color: #394C57; border-color: #4B5D67 !important;
 
 ul.list li { background-color: #394C57 }
 
-.notebook > .row:first-child { background-color: #484E6D; }
-.notebook .tab { color: #ffffff; background-color: transparent; }
-.notebook .tab.active { color: #ffffff; background-color: #FFFFFF; }
+.notebook .col.md-3.align-left { font-weight: 500; color: #0d9b51; }
+.notebook > .row:first-child { background-color: #FFFFFF; }
+.notebook .tab { color: #4F6E8A; background-color: transparent; }
+.notebook .tab.active { color: #FFFFFF; background-color: #AD4DBF; border-radius: 3px !important; }
+
+.well.notebook > .row.align-center { padding-right: 10px; }
 
 .well { background-color: #FFFFFF; box-shadow: 0 1px 2px #d2d2d2; }
 .well .well__heading { color: #4F6E8A; border-bottom: 1px solid #e2e2e2; }
 
-.well hr { border-color: #66727D; }
-.well .highlight { background-color: #34444d; }
+.well hr { border-color: #FFFFFF; opacity: 0.3; }
+.well .highlight { background-color: #FFFFFF; }
+
+.auth-view > hr.no-margin:nth-child(2),
+.auth-view > hr.no-margin:nth-child(3) { display: none; }
+
+.auth-view .toggle-form.pointer { color: #AD4DBF; font-weight: 500; }
 
 .left { float:left !important; }
 .right { float:right !important; }
