@@ -85,21 +85,21 @@ var ngDependency  = ['ngRoute'];
 <script type="text/javascript">
 var applyTheme = function (theme) {
     let head = document.head, link = (document.getElementById('themeCss') || document.createElement('link'));
+    link.href = 'css/' + theme + '.css';
 
-    if (typeof link.id === 'undefined' || typeof link.rel === 'undefined') {
+    if (!link.id || !link.rel) {
         link.rel = 'stylesheet';
         link.id = 'themeCss';
         link.type = 'text/css';
-    }
 
-    link.href = 'css/' + theme + '.css';
-    head.appendChild(link);
+        head.appendChild(link);
+    }
 };
 
-(function (document, angular) {
+(function (angular) {
     applyTheme(appConfig.theme || 'default-dark-theme');
     angular.element('.app-layout').fadeIn({ duration: 1000 });
-})(document, window.angular);
+})(window.angular);
 </script>
 </body>
 </html>
