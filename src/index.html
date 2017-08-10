@@ -7,7 +7,6 @@
 <link rel="stylesheet" type="text/css" href="css/material-icons.css" />
 <link rel="stylesheet" type="text/css" href="css/animations.css" />
 <link rel="stylesheet" type="text/css" href="css/layout.css" />
-<link rel="stylesheet" type="text/css" href="css/elegant-light-theme.css" />
 </head>
 <body class="body">
 
@@ -84,9 +83,18 @@ var ngDependency  = ['ngRoute'];
 <script type="text/javascript" src="controllers/settings.js"></script>
 
 <script type="text/javascript">
-(function (angular) {
+(function (document, angular, config) {
+    let head = document.head, link = document.createElement('link');
+
+    link.type = 'text/css';
+    link.rel = 'stylesheet';
+    link.href = 'css/' + (config.theme || 'default-dark-theme') + '.css';
+    link.id = 'themeCss';
+
+    head.appendChild(link);
+
     angular.element('.app-layout').fadeIn({ duration: 1000 });
-})(window.angular);
+})(document, window.angular, appConfig);
 </script>
 </body>
 </html>
