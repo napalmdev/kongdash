@@ -89,6 +89,7 @@
             ipcRenderer.send('write-config', { name: 'app', config: $scope.appConfig });
 
             if (typeof applyTheme === 'function') applyTheme($scope.appConfig.theme);
-        });
+
+        }).find('option[value="' + ($scope.appConfig.theme || 'default-dark-theme') + '"]').prop('selected', 'selected');
     }]);
 })(document, window.angular, app, ipcRenderer, kongConfig, appConfig);
