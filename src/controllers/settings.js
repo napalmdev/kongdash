@@ -1,5 +1,5 @@
-/* global app:true ipcRenderer:true kongConfig:true appConfig:true */
-(function (angular, app, ipcRenderer, kongConfig, appConfig) { 'use strict';
+/* global app:true ipcRenderer:true kongConfig:true appConfig:true applyTheme:true */
+(function (document, angular, app, ipcRenderer, kongConfig, appConfig) { 'use strict';
     const controller = 'SettingsController';
 
     if (typeof app === 'undefined') throw (controller + ': app is undefined');
@@ -87,6 +87,8 @@
 
             $scope.appConfig.theme = element.val();
             ipcRenderer.send('write-config', { name: 'app', config: $scope.appConfig });
+
+            if (typeof applyTheme === 'function') applyTheme($scope.appConfig.theme);
         });
     }]);
-})(window.angular, app, ipcRenderer, kongConfig, appConfig);
+})(document, window.angular, app, ipcRenderer, kongConfig, appConfig);
