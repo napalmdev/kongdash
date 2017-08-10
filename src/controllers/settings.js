@@ -81,5 +81,12 @@
 
             ipcRenderer.send('write-config', { name: 'app', config: $scope.appConfig });
         });
+
+        angular.element('#themeSelector').on('change', function (event) {
+            let element = angular.element(event.target);
+
+            $scope.appConfig.theme = element.val();
+            ipcRenderer.send('write-config', { name: 'app', config: $scope.appConfig });
+        });
     }]);
 })(window.angular, app, ipcRenderer, kongConfig, appConfig);
