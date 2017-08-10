@@ -84,7 +84,7 @@ var ngDependency  = ['ngRoute'];
 
 <script type="text/javascript">
 var applyTheme = function (theme) {
-    let head = document.head, link = document.getElementById('themeCss') || document.createElement('link');
+    let head = document.head, link = (document.getElementById('themeCss') || document.createElement('link'));
 
     if (typeof link.id === 'undefined' || typeof link.rel === 'undefined') {
         link.rel = 'stylesheet';
@@ -98,7 +98,6 @@ var applyTheme = function (theme) {
 
 (function (document, angular) {
     applyTheme(appConfig.theme || 'default-dark-theme');
-
     angular.element('.app-layout').fadeIn({ duration: 1000 });
 })(document, window.angular);
 </script>
