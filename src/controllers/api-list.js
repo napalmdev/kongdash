@@ -24,6 +24,8 @@
             httpIfTerminated: true
         };
 
+        $scope.apiSearch = '';
+
         $scope.apiList = [];
         $scope.fetchApiList = function (resource) {
             ajax.get({ resource: resource }).then(function (response) {
@@ -39,10 +41,33 @@
             });
         };
 
+        $scope.fetchApiByHostname = function (resource) {
+            ajax.get({ resource: resource }).then(function (response) {
+                $scope.nextUrl = (typeof response.data.next === 'string') ?
+                    response.data.next.replace(new RegExp(viewFactory.host), '') : '';
+
+                if (response.data.id) {
+                    $scope.apiList = [];
+                    $scope.apiList.push(response.data);
+                }
+
+            }, function () {
+                toast.error('Could not load API');
+            });
+        };        
+
         let panelAdd = angular.element('div#panelAdd');
         let apiForm = panelAdd.children('div.panel__body').children('form');
-
+        let searchButton = angular.element('#apiActionSearch');
+        
         let table = angular.element('table#apiTable');
+
+        searchButton.on('click', function () {
+            if ($scope.apiSearch) {
+                return $scope.fetchApiByHostname('/apis/' + $scope.apiSearch);
+            }
+            return $scope.fetchApiList('/apis');
+        });
 
         table.on('click', 'i.state-highlight', function (event) {
             let icon = angular.element(event.target);

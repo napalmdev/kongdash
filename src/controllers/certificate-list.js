@@ -14,6 +14,8 @@
             snis: ''
         };
 
+        $scope.certSearch = '';
+
         $scope.fetchCertList = function (resource) {
             ajax.get({ resource: resource }).then(function (response) {
                 $scope.nextUrl = (typeof response.data.next === 'string') ?
@@ -28,8 +30,31 @@
             });
         };
 
+        $scope.fetchCertByHostname = function (resource) {
+            ajax.get({ resource: resource }).then(function (response) {
+                $scope.nextUrl = (typeof response.data.next === 'string') ?
+                    response.data.next.replace(new RegExp(viewFactory.host), '') : '';
+
+                if (response.data.id) {
+                    $scope.certList = [];
+                    $scope.certList.push(response.data);
+                }
+
+            }, function () {
+                toast.error('Could not load Certificate');
+            });
+        };   
+
         let panelAdd = angular.element('div#panelAdd');
         let certForm = panelAdd.children('div.panel__body').children('form');
+        let searchButton = angular.element('#certActionSearch');
+
+        searchButton.on('click', function () {
+            if ($scope.certSearch) {
+                return $scope.fetchCertByHostname('/certificates/' + $scope.certSearch);
+            }
+            return $scope.fetchCertList('/certificates');
+        });
 
         panelAdd.children('div.panel__heading').on('click', function () {
             certForm.slideToggle(300);

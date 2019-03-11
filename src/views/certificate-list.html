@@ -29,14 +29,32 @@
     </div>
 </div>
 
+<div class="panel panel-border success" id="panelSearch">
+    <div class="panel__heading pointer">Search Certificate</div>
+    <div class="panel__body">
+        <div class="row">
+            <div class="col md-6"><input type="text" name="certSearch" value="" data-ng-model="certSearch" placeholder="Type Cert Name" title="Search for the Certificate" /></div>
+            <input class="btn success" type="button" name="actionSearch" id="certActionSearch" value="Search Certificate" />
+        </div>
+        <br>
+    </div>    
+</div>
+
 <div class="well">
     <div class="well__heading">List of Certificates</div>
     <table id="certTable" class="table" cellpadding="0" cellspacing="0">
-        <thead data-ng-if="certList.length>0"><tr><th>Certificate ID</th><th>Created At</th><th>Actions</th></tr></thead>
-
+        <thead data-ng-if="certList.length>0">
+            <tr>
+                <th>Certificate ID</th>
+                <th>Hostname (SNI-0)</th>
+                <th>Created At</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
         <tbody>
         <tr data-ng-repeat="cert in certList">
             <td><a href="#!/certificates/{{cert.id}}">{{cert.id}}</a></td>
+            <td><a href="#!/certificates/{{cert.id}}">{{cert.snis[0]}}</a></td>
             <td>{{cert.created_at | date}}</td>
             <td>
                 <div class="action-group">

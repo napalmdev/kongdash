@@ -25,9 +25,8 @@ let startMainWindow = function () {
     });
     mainWindow.loadURL('file://' + absPath + '/src/initialize.html');
 
-    /* Debugging
-    mainWindow.webContents.openDevTools();
-    //*/
+    // Debugging
+    // mainWindow.webContents.openDevTools();
 
     mainWindow.on('closed', () => {
         mainWindow = null;
